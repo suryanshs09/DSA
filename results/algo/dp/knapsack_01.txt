@@ -1,0 +1,37 @@
+knapsack (Recursive approach):
+Testcase 1 passed       Time taken: 0 ms
+Testcase 2 passed       Time taken: 0 ms
+Testcase 3 passed       Time taken: 13985 ms
+Testcase 4 failed
+Testcase 5 failed
+Testcase 6 failed
+time complexity: O(2^n) here, n is the size of input array
+space complexity: O(n) for recursive call stack 
+reason for failure: 
+the time complexity of recursive approach is O(2^n) and in Testcase 4, n=50;
+knowing it took 13985 ms for n=20 in Testcase 3, we have:
+the approx time for computing Testcase 4 with n=50 is 15016279408640 ms i.e. 476.163096 years
+the approx time for computing Testcase 5 with n=80 is 16123607241926754959360 ms i.e. 527907157.33 years
+the approx time for computing Testcase 6 with n=100 is 16906827587310589008265871360 ms i.e. 539659361.47 years
+hence, it is not a good approach for even slightly large values of n.
+
+knapsack (Memoized approach):
+Testcase 1 passed       Time taken: 0 ms
+Testcase 2 passed       Time taken: 0 ms
+Testcase 3 passed       Time taken: 0 ms
+Testcase 4 passed       Time taken: 997 ms
+Testcase 5 passed       Time taken: 3025 ms
+Testcase 6 passed       Time taken: 6979 ms
+time complexity: O(n*w) here, n is size of input array and w is total capacity
+space complexity: O(n*w) + O(n) here, O(n*w) for storing the dp table of n*w size and O(n) for recursive call stack 
+
+knapsack (top-down/tabular approach):
+Testcase 1 passed       Time taken: 0 ms  
+Testcase 2 passed       Time taken: 0 ms  
+Testcase 3 passed       Time taken: 0 ms  
+Testcase 4 passed       Time taken: 997 ms
+Testcase 5 passed       Time taken: 2000 ms
+Testcase 6 passed       Time taken: 7973 ms
+time complexity: O(n*w) here, n is size of input array and w is total capacity
+space complexity: O(n*w) here, O(n*w) for storing the dp table of n*w size
+hence, top-down dp is the best approach for solving 0/1 knapsack problem. 
